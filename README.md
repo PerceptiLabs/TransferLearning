@@ -9,6 +9,8 @@ However, when working in raw code, it can be difficult to understand an existing
 
 We've provided this GitHub repo to show how easy it is to do transfer learning in PerceptiLabs. By using PerceptiLabs, you gain the ability to split the base and label training, and can visualize the transformed data and predictions.
 
+**Note**: This model is not compatible with PerceptiLabs 0.12 as the UI and components have changed.
+
 In the included model, we show how a [Custom component](https://www.perceptilabs.com/docs/components) invokes [tf.keras.applications.MobileNetV2()](https://keras.io/api/applications/mobilenet/#mobilenetv2-function) to get a pre-trained MobileNet v2 model, loaded with ImageNet weights. We then feed images of flowers into this model to classify them. The following screenshot shows this model in PerceptiLabs:
 
 ![](./model_screenshot.png)
@@ -54,7 +56,7 @@ Note that the underlying image data originated from [TensorFlow's Image Classifi
 
 # Structure
 This repo has the following structure:
-* **/model.json**: contains the PerceptiLabs model file.
+* **/model.json**: contains the PerceptiLabs model file for use in PerceptiLabs v0.11.
 
 # Installation
 
@@ -62,7 +64,7 @@ Follow the steps below to load and prepare the sample model in PerceptiLabs:
 
 1. Clone or download the sample model from GitHub.
 2. Download the data files from [here](https://drive.google.com/drive/folders/1CZz8gVHhAOA1ElMWRChUMBgFT2nqq_ed).
-2. On the ModelHub screen in PerceptiLabs, import the sample model into PerceptiLabs. When prompted for the model's directory, navigate to and select the location of the **model.json** file.
+2. On the ModelHub screen in PerceptiLabs, import the sample model into PerceptiLabs. Note that this model is not compatible with PerceptiLabs 0.12 as the UI and components have changed. When prompted for the model's directory, navigate to and select the location of the **model.json** file.
 4. Open the topmost **Data** component in the model workspace and set its file to **images.npy**.
 Open the second **Data** component in the model workspace and set its file to **labels.npy**.
 
